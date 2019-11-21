@@ -4,13 +4,13 @@
       "id": 1,
       "name": "Woody",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
-      "likes": 5
+      "likes": 7
     },
     {
       "id": 2,
       "name": "Buzz Lightyear",
       "image": "http://www.pngmart.com/files/6/Buzz-Lightyear-PNG-Transparent-Picture.png",
-      "likes": 8
+      "likes": 1
     },
     {
       "id": 3,
@@ -47,6 +47,60 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
+    },
+    {
+      "name": "Mary",
+      "image": "https://s.hdnux.com/photos/01/04/21/35/17897302/3/920x920.jpg",
+      "likes": 1,
+      "id": 9
+    },
+    {
+      "name": "Joan",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Albert_Lynch_-_Jeanne_d%27Arc.jpg/170px-Albert_Lynch_-_Jeanne_d%27Arc.jpg",
+      "likes": 1,
+      "id": 10
+    },
+    {
+      "name": "Christine",
+      "image": "https://www.biography.com/.image/t_share/MTE5NTU2MzE2MTg0MDg2MDI3/christine-de-pisan-9247589-1-402.jpg",
+      "likes": 6,
+      "id": 11
+    },
+    {
+      "name": "Billie",
+      "image": "https://static.playbill.com/dims4/default/6aa6bcf/2147483647/crop/878x1047%2B0%2B1/resize/300x358%3E/quality/90/?url=http%3A%2F%2Fplaybill-brightspot.s3.amazonaws.com%2F45%2Fa2%2F1fe0a12243f884b8001cb0388f31%2Fbillie-holiday.jpg",
+      "likes": 4,
+      "id": 12
+    },
+    {
+      "name": "Cleopatra",
+      "image": "https://i.pinimg.com/originals/07/06/1f/07061f630ba64eec429ef810fbf123fe.jpg",
+      "likes": 0,
+      "id": 13
+    },
+    {
+      "name": "Harriet",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Harriet_Tubman_by_Squyer%2C_NPG%2C_c1885.jpg/1200px-Harriet_Tubman_by_Squyer%2C_NPG%2C_c1885.jpg",
+      "likes": 0,
+      "id": 14
+    },
+    {
+      "name": "Rosa",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Rosaparks.jpg",
+      "likes": 0,
+      "id": 15
+    },
+    {
+      "name": "Ruth",
+      "image": "https://www.biography.com/.image/t_share/MTE5NTU2MzE2MjMwNTUxMDUx/ruth-bader-ginsburg-9312041-1-402.jpg",
+      "likes": 0,
+      "id": 16
+    },
+    {
+      "name": "Greta",
+      "image": "https://i1.wp.com/www.nationalreview.com/wp-content/uploads/2019/09/greta-thunberg-united-nations-2.jpg?resize=300%2C300&ssl=1",
+      "likes": 0,
+      "id": 17
     }
   ]
 }
