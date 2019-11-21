@@ -21,6 +21,10 @@ body {
   margin: 2rem;
 }
 
+.ded {
+  display: none;
+}
+
 .card {
   text-align: center;
   border: grey solid 1px;

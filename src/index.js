@@ -32,26 +32,35 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
   function likeToy(toy){
     toy.likes++
-    let patchData = JSON.stringify(toy)
-    fetch(`http://localhost:3000/toys/${toy.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: patchData
-    })
-
-    let likesOnPage = document.getElementById(toy.id)
-    likesOnPage.innerText = `${parseInt(likesOnPage.innerText) + 1} request(s) for death` 
+    if(toy.likes>=10){
+      fetch(`http://localhost:3000/toys/${toy.id}`, {
+        method: "DELETE",
+      })
+      .then(res=>res.json())
+      .then(json=>{
+        alert(`${toy.name} has reached the sweet release`)
+        let toyCard = document.getElementById(toy.image)
+        toyCard.className = 'ded'
+      })
+    }
+    else{
+      let patchData = JSON.stringify(toy)
+      fetch(`http://localhost:3000/toys/${toy.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: patchData
+      })
+  
+      let likesOnPage = document.getElementById(toy.id)
+      likesOnPage.innerText = `${parseInt(likesOnPage.innerText) + 1} request(s) for death` 
+    }
   }
 
   function addNewToy(e){
     e.preventDefault()
-    let inputs = document.getElementsByClassName("input-text")
-    inputs[0].value = ''
-    inputs[1].value = ''
-    console.log(inputs[0].value, "<--That is the value of the input")
     let postData = {
       name: e.target.name.value,
       image: e.target.image.value,
@@ -69,6 +78,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
     .then(json=>{
       if(json.id){
         appendToyCard(json)
+        let inputs = document.getElementsByClassName("input-text")
+        inputs[0].value = ''
+        inputs[1].value = ''
+        console.log(inputs[0].value, "<--That is the value of the input")
       }
       else {
         alert("something fucked up")
@@ -79,6 +92,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
   function appendToyCard(toyInfo){
     let card = document.createElement('div')
     card.className = "card"
+    card.id = toyInfo.image
     let h2 = document.createElement('h2')
     h2.innerText = toyInfo.name
     let img = document.createElement('img')
